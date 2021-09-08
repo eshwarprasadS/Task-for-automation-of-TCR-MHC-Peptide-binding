@@ -37,7 +37,7 @@ The Protein Data Bank (PDB) format is a standardized format for files containing
 
 ![runningscript](images/running_script.png)
 
-## Locating the result files : 
+## Locating the Result files : 
 
 Result files are located in the same directory as the python script. There are two types of result files : 
 
@@ -48,7 +48,7 @@ Results are numbered, where x is the serial number of the peptide in the referen
 
 ![result_files_saved](images/result_files_saved.JPG)
 
-## Verifying the mutation :
+## Verifying the Mutation :
 
 To verify the mutation has taken place successfully, open the first result file to view the sequence
 
@@ -61,7 +61,7 @@ The mutated chain of the ligand can be verified through Chimera, by going throug
 
 ![mutated_ligand](images/mutated_ligand.png)
 
-## Verifying the modification : 
+## Verifying the Modification : 
 
 For Step 3 of the task, the modification of abbreviations of all amino-acids to 'LIG', 'L', '1' can be verified in the following methods :
 
