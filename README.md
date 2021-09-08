@@ -1,4 +1,4 @@
-# Task-for-automation-of-TCR-MHC-Peptide-binding
+# Task-for-Automation-of-TCR-MHC-Peptide-Binding
 My Solution for the Task of automation of TCR-MHC-Peptide binding
 
 ## Given Task
