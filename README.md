@@ -24,7 +24,8 @@ The Protein Data Bank (PDB) format is a standardized format for files containing
 
 [source](https://www.cgl.ucsf.edu/chimera/docs/UsersGuide/tutorials/framepdbintro.html)
 
-![pdbformat](images/pdbformat.jpg)
+
+![pdbformat](images/pdbformat.JPG)
 
 
 ## How To Run
