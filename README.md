@@ -16,7 +16,40 @@ Given task can be simplified into two sub problems:
 * Mutate the 9 residue long chain-c of the ligand.
 * Apply the required modifications to the resulting pdb file.
 
-The solution python script named **"chimera_script.py"** achieves both the required tasks and saves the resulting files in the local directory for reference.
+The solution python script named ```chimera_script.py``` achieves both of the required tasks and saves the resulting files in the local directory for reference.
+
+## Mutation Overview
+
+The python script accesses Chimera commands using the function ```runCommand()```. 
+
+Iterate over the sequence of residues present in the 9-bp long peptide, and for each residue, call the ‘swapaa’ chimera command with the corresponding 3-alphabet representation at the respective index. The 20 common amino acids’ mappings are coded into a *look-up* dictionary.
+
+Example Amino-Acid Mapping : 
+
+```python
+AMINO_MAPPING = {
+    'A' : 'ala',
+    'G' : 'gly',
+    'I' : 'ile',
+    'L' : 'leu',
+    'P' : 'pro',
+    'V' : 'val',
+    'F' : 'phe',
+    'W' : 'trp',
+    'Y' : 'tyr',
+    'D' : 'asp',
+    'E' : 'glu',
+    'R' : 'arg',
+    'H' : 'his',
+    'K' : 'lys',
+    'S' : 'ser',
+    'T' : 'thr',
+    'C' : 'cys',
+    'M' : 'met',
+    'N' : 'asn',
+    'Q' : 'gln'
+}
+```
 
 ## PDB Format
 
@@ -30,10 +63,10 @@ The Protein Data Bank (PDB) format is a standardized format for files containing
 
 ## How To Run
 
-### Running "chimera_script.py" :
+### Running ```chimera_script.py``` :
 
 * Open UCSF Chimera
-* File -> Open -> Select "chimera_script.py" from local directory
+* File -> Open -> Select ```chimera_script.py``` from local directory
 
 ![runningscript](images/running_script.png)
 
@@ -52,7 +85,7 @@ Results are numbered, where x is the serial number of the peptide in the referen
 
 To verify the mutation has taken place successfully, open the first result file to view the sequence
 
-* Open 'mutation_result_1.pdb' using UCSF Chimera
+* Open ```mutation_result_1.pdb``` using UCSF Chimera
 * Select Favorites -> Sequence to display the mutated sequence
 
 ![sequence_img](images/sequence_img.png)
@@ -67,7 +100,7 @@ For Step 3 of the task, the modification of abbreviations of all amino-acids to 
 
 ## Method 1
 
-* Open the 'mutation_result_1_modified.pdb' using UCSF Chimera
+* Open the ```mutation_result_1_modified.pdb``` using UCSF Chimera
 
 * Verify the existence of the one and only chain, chain 'L', by Select -> Chain -> L
 
@@ -79,7 +112,7 @@ For Step 3 of the task, the modification of abbreviations of all amino-acids to 
 
 ## Method 2
 
-* Open the 'mutation_result_1_modified.pdb' using a text editor, such as notepad
+* Open the ```mutation_result_1_modified.pdb``` using a text editor, such as notepad
 
 * Investigate all the 'ATOM' records, to verify that all atoms belong to the same residue 'LIG', to the same chain 'L' and to the same residue sequence '1'
 
@@ -94,6 +127,8 @@ For Step 3 of the task, the modification of abbreviations of all amino-acids to 
 ```bash
 $ git clone https://github.com/eshwarprasadS/Task-for-automation-of-TCR-MHC-Peptide-binding.git
 ```
+## Extracting the .rar file
+If you have the archive file (compressed .rar file) ```Task-for-automation-of-TCR-MHC-Peptide-binding.rar```, unzip / extract the .rar file and navigate the contents as described in the [How To Run](#how-to-run) section.
 ## Dependencies/Libraries
 
 > The script has no external dependencies and requires no special libraries, Chimera can run the python script as it is.
